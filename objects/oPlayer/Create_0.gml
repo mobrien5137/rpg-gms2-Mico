@@ -6,3 +6,4 @@ speedWalk = 2.0
 spriteRun = sPlayerRun;
 spriteIdle = sPlayer;
 localFrame = 0;
+inputDirection = 0;

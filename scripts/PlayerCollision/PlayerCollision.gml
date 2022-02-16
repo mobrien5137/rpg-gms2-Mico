@@ -1,6 +1,5 @@
-function PlayerCollision(){
-	
-	
+function PlayerCollision()
+{
 
 var _collision = false
 

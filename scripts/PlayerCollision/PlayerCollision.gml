@@ -1,7 +1,7 @@
 function PlayerCollision()
 {
 
-var _collision = false
+var _collision = false;
 
 //Horizontal Tiles
 if (tilemap_get_at_pixel(collisionMap, x + hSpeed, y))

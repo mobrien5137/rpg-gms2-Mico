@@ -14,3 +14,4 @@ spriteRun = sPlayerRun;
 spriteIdle = sPlayer;
 localFrame = 0;
 inputDirection = 0;
+omniDirection = 0

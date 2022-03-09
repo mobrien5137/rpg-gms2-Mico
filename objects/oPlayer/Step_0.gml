@@ -12,25 +12,50 @@ keyItem = keyboard_check_pressed(vk_control);
 keyDash = keyboard_check_pressed(vk_alt);
 inputDirection = point_direction(0,0,keyRight-keyLeft,keyDown-keyUp);
 inputMagnitude = (keyRight - keyLeft != 0) || (keyDown - keyUp != 0)
+
+
+
+if keyLeft
+{
+	omniDirection = -1;
+}
+
+if keyRight
+{
+	omniDirection = 1;
+}
+
+
 //Movement
 hSpeed = lengthdir_x(inputMagnitude * speedWalk, inputDirection);
 vSpeed = lengthdir_y(inputMagnitude * speedWalk, inputDirection);
 PlayerStateFree();
 PlayerAnimateSprite();
 
-if dash
+if keyDash
 {
 	dashing = true;
 }
 if dashing
 {
 	dashTimer -= 1/room_speed;
-	if dashTimer <= 0;
+	if dashTimer <= 0
 	{
-		dashing = false
+		dashing = false;
 		dashTimer = 0.3;
 	}
-	if (!place_empty(x + xVector, y))
+	if (!place_empty(x + hSpeed, y))
 	{
-		xVector = 0:
+		hSpeed = 0 ;
 	}
+
+	//otherwise move fast
+	if omniDirection = -1
+	{
+		x = x - 10
+	}
+	if omniDirection = 1 
+	{
+		x = x + 10;
+	}
+}

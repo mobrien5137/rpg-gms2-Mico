@@ -52,10 +52,10 @@ if dashing
 	//otherwise move fast
 	if omniDirection = -1
 	{
-		x = x - 10
+		x = x - 3
 	}
 	if omniDirection = 1 
 	{
-		x = x + 10;
+		x = x + 3
 	}
 }
